@@ -24,13 +24,13 @@ jobs:
             ${{ runner.os }}-npm
       - run: npm ci
       - run: npm run build:data
-      - run: npm run build && ls -l build
+      - run: npm run build && ls -l .next
       - run: if [ -n "$(git status --porcelain)" ]; then echo 'workspace is dirty after rebuilding' ; git status ; git diff ; exit 1 ; fi
       - name: Upload build artifacts
         uses: actions/upload-artifact@v3
         with:
           name: build-artifacts
-          path: ./build  
+          path: .next
 
   deploy:
     runs-on: ubuntu-latest
@@ -43,11 +43,11 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: build-artifacts
-          path: ./build 
+          path: .next
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build 
+          publish_dir: .next
 
