@@ -1,4 +1,4 @@
-# AOE Technology Radar
+# EVERSE Technology Radar
 
 A static site generator for AOE Technology Radar
 
