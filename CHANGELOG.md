@@ -1,5 +1,31 @@
 # Changelog
 
+## Version v4.4.1 (2025-01-22)
+
+### Fixes
+
+- fix main url (80c7853e)
+- fix deploy (b3f851a5)
+
+### Other
+
+- trying different build (dac62144)
+- trying different build (53b59b05)
+- modify url again (4ae0e22c)
+- modify url again (d0b7020e)
+- modify info in package.json (7a5e56f2)
+- modify info in package.json (f3ffc64c)
+- modify info in package.json (0f4aebad)
+- ls build (75818b5a)
+- ls build (8accde2e)
+- ls build (e11d22fb)
+- ls build (8ec32252)
+- do not build twice (81d3a5ef)
+- edit url in config.json (aa29f62e)
+- deploy to github (f4904472)
+- trig action (5750bc8e)
+- modify to see what EVERSE radar could be (14b1c178)
+
 ## Version v4.4.0 (2024-07-01)
 
 ### Features
