@@ -24,7 +24,7 @@ jobs:
             ${{ runner.os }}-npm
       - run: npm ci
       - run: npm run build:data
-      - run: npm run build && ls -la .
+      - run: npm run build && ls -la . && ls -la out
       - run: if [ -n "$(git status --porcelain)" ]; then echo 'workspace is dirty after rebuilding' ; git status ; git diff ; exit 1 ; fi
       - name: Upload build artifacts
         uses: actions/upload-artifact@v3
