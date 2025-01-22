@@ -1,6 +1,6 @@
 {
   "basePath": "/techradar",
-  "baseUrl": "",
+  "baseUrl": "https://vuillaut.github.io/",
   "editUrl": "",
   "logoFile": "logo.svg",
   "jsFile": "",
@@ -104,23 +104,23 @@
   },
   "social": [
     {
-      "href": "https://twitter.com/aoepeople",
+      "href": "",
       "icon": "x"
     },
     {
-      "href": "https://www.linkedin.com/company/aoe",
+      "href": "",
       "icon": "linkedIn"
     },
     {
-      "href": "https://www.xing.com/company/aoe",
+      "href": "",
       "icon": "xing"
     },
     {
-      "href": "https://github.com/aoepeople",
+      "href": "",
       "icon": "github"
     }
   ],
-  "imprint": "https://www.aoe.com/en/imprint.html",
+  "imprint": "",
   "labels": {
     "title": "EVERSE Technology Radar",
     "imprint": "Legal Information",
