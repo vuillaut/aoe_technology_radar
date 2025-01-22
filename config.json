@@ -1,6 +1,6 @@
 {
-  "basePath": "/techradar",
-  "baseUrl": "https://vuillaut.github.io/aoe_technology_radar/",
+  "basePath": "/aoe_technology_radar",
+  "baseUrl": "https://vuillaut.github.io/aoe_technology_radar",
   "editUrl": "",
   "logoFile": "logo.svg",
   "jsFile": "",
