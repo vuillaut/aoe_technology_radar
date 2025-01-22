@@ -26,6 +26,11 @@ jobs:
       - run: npm run build:data
       - run: npm run build
       - run: if [ -n "$(git status --porcelain)" ]; then echo 'workspace is dirty after rebuilding' ; git status ; git diff ; exit 1 ; fi
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: build-artifacts
+          path: ./build  # Adjust this path to your build output directory
 
   deploy:
     runs-on: ubuntu-latest
@@ -34,26 +39,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
         with:
-          node-version: 'lts/*'
-
-      - name: Cache Node.js modules
-        uses: actions/cache@v4
-        with:
-          path: |
-            ~/.npm
-            **/node_modules
-          key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-npm
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build website
-        run: npm run build
+          name: build-artifacts
+          path: ./build  # Adjust this path to your build output directory
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
