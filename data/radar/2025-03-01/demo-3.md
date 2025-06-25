@@ -1,7 +1,7 @@
 ---
 title: "Demo 3"
 ring: hold
-segment: tools
+segment: s3
 tags: [coding, frontend]
 ---
 
