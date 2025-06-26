@@ -1,9 +1,4 @@
 .label {
-  width: 240px;
-  min-height: 210px;
-  position: absolute;
-  top: 0;
-  left: 0;
   transition: all 0.2s ease-in-out;
 }
 
@@ -24,59 +19,6 @@
 .description {
   font-size: 14px;
   opacity: 0.75;
-}
-
-.position-1,
-.position-2 {
-  left: auto;
-  right: 0;
-}
-
-.position-2,
-.position-3 {
-  top: auto;
-  bottom: 0;
-}
-
-/** re-order the labels to top-left in some configurations */
-[data-segments="1"] .position-1,
-[data-segments="2"] .position-2,
-[data-segments="3"] .position-3 {
-  top: 0;
-  bottom: auto;
-  left: 0;
-  right: auto;
-}
-
-[data-segments="5"] .position-3 {
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-[data-segments="5"] .position-4 {
-  top: auto;
-  bottom: 0;
-}
-
-/* re-order the labels in the middle */
-[data-segments="6"] .position-2,
-[data-segments="6"] .position-5 {
-  bottom: auto;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-[data-segments="6"] .position-3 {
-  left: auto;
-  right: 0;
-  bottom: 0;
-}
-
-[data-segments="6"] .position-4 {
-  left: 0;
-  right: auto;
-  top: auto;
-  bottom: 0;
 }
 
 @media (max-width: 968px) {
